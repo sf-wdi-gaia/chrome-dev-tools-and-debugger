@@ -16,8 +16,9 @@ Market: SF
 ## What are the objectives?
 *After this workshop, developers will be able to:*
 
-- Open and describe the components of the Chrome developer tools
-- Use the Source tab to debug Javascript in the browser
+- Explain use cases for at least 3 tabs in the Chrome Developer Tools (Elements, Console, Network, Sources)
+- Use breakpoints and `debugger` to pause and debug a script in progress
+- Write a Snippet for later reuse
 
 ## Where should we be now?
 *Before this workshop, developers should already be able to:*
@@ -233,6 +234,18 @@ Most of the time, the JavaScript in a website will be minified, meaning that var
 
 > When you start building web apps in larger frameworks like Rails or Express, you'll set up your development environment so that code is only minified when you're deploying a production app, not while you're developing actively.
 
+#### Snippets
+
+Although we won't be using Snippets in our exercise, I would like to take a moment to show you what they do. Snippets allow you to run a small piece of code on any website.
+
+Try this:
+
+```javascript
+ var bod = document.querySelector('body');
+    bod.onclick = function(e){
+    this.style.transform = 'rotateZ(-40deg)';
+ }
+```
 ## Independent Practice (15 Minutes)
 Lets debug some JavaScript!
 
@@ -244,6 +257,20 @@ to open it in your default browser (should be Chrome)
 Start in the console and look for error messages.
 
 Use breakpoints, the `debugger` keyword, and anything else we learned to get this code working!
+
+#### Stretch Goals:
+
+The following goals are totally optional. Stretch yourself to use part of the Chrome Developer Tools you are less familiar with to get them working.
+
+* Option 1 (easy):
+Write a new function, `checkForWin()` that compares the values of all the dice and changes the DOM to indicate a win if the values match.
+
+* Option 2 (medium):
+Track the scores over time using browser storage. Players want to accumulate 100 points to win.
+
+* Option 3 (hard):
+Find the rules to the game `Tenzi` and implement them.
+
 
 ## Closing Thoughts
 
